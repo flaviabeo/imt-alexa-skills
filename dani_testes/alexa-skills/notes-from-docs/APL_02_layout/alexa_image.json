@@ -1,0 +1,76 @@
+//alexa image é um componente que ajuda na responsividade de telas na parte de centralização. Sem ela, seria necessário criar 2 containers de centralizar row e column 
+
+{
+    "type": "APL",
+    "version": "1.9",
+    "import": [
+        {
+            "name": "alexa-layouts",
+            "version": "1.6.0"
+        }
+    ],
+    "mainTemplate": {
+        "items": [
+            {
+                "type": "Container",
+                "height": "100%",
+                "width": "100%",
+                "items": [
+                    {
+                        "type": "AlexaImage",
+                        "id": "imageComponent",
+                        "imageSource": "https://d2o906d8ln7ui1.cloudfront.net/images/templates_v3/gridlist/GridList_Image5.png",
+                        "imageScale": "none",
+                        "imageAlignment": "center",
+                        "imageRoundedCorner": false,
+                        "imageHeight": "100%",
+                        "imageWidth": "100%"
+                    }
+                ]
+            }
+        ]
+    }
+}
+
+
+//SEM 
+{
+    "type": "APL",
+    "version": "1.9",
+    "import": [
+        {
+            "name": "alexa-layouts",
+            "version": "1.6.0"
+        }
+    ],
+    "mainTemplate": {
+        "items": [
+            {
+                "type": "Container",
+                "height": "100%",
+                "width": "100%",
+                "direction":"row",
+                "items": [
+                    {
+                        "type": "Container",
+                        "height": "100%",
+                        "width": "100%",
+                        "direction": "column",
+                        "justifyContent": "center",
+                        "items": [
+                            {
+                                "type": "Image",
+                                "id": "imageComponent",
+                                "source": "https://d2o906d8ln7ui1.cloudfront.net/images/templates_v3/gridlist/GridList_Image5.png",
+                                "scale": "best-fit",
+                                "alignSelf": "center",
+                                "height": "352px",
+                                "width":"352px"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

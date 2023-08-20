@@ -1,0 +1,31 @@
+{
+    "type": "APL",
+    "version": "1.9",
+    "mainTemplate": {
+      "parameters": [
+        "gameStrings"
+      ],
+      "items": [
+        {
+          "type": "Container",
+          "height": "100%",
+          "width": "100%",
+          "justifyContent": "center",
+          "items": [
+            {
+              "type": "Text",
+              "text": "${gameStrings.headerTitle}",
+              "fontSize": "50dp",
+              "textAlign": "center"
+            },
+            {
+              "type": "Text",
+              "text": "${gameStrings.hintText}",
+              "fontSize": "35dp",
+              "textAlign": "center"
+            }
+          ]
+        }
+      ]
+    }
+  }

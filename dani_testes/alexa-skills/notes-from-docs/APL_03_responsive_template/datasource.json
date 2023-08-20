@@ -1,0 +1,48 @@
+{
+    "listData": {
+      "headerTitle": "Alexa lists header title",
+      "headerSubtitle": "Header subtitle",
+      "headerAttributionImage": "https://s3.amazonaws.com/ask-skills-assets/apl-layout-assets/attribution_dark_hub_prime.png",
+      "backgroundImageSource": "https://d2o906d8ln7ui1.cloudfront.net/images/BT6_Background.png",
+      "defaultImageSource": "https://d2o906d8ln7ui1.cloudfront.net/images/BT7_Background.png",
+      "hintText": "Alexa lists footer hint text",
+      "emptyPrimaryText": "You don't have any list items",
+      "emptySecondaryText": "To get started, tell me the item to add to the list",
+      "listItemsToShow": [
+        {
+          "primaryText": "First list item",
+          "secondaryText": "Secondary text",
+          "imageSource": "https://d2o906d8ln7ui1.cloudfront.net/images/md_gruyere.png",
+          "imageProgressBarPercentage": 90,
+          "imageShowProgressBar": false
+        },
+        {
+          "primaryText": "Second list item",
+          "secondaryText": "Secondary Text",
+          "tertiaryText": "Tertiary text",
+          "imageSource": "https://d2o906d8ln7ui1.cloudfront.net/images/md_gorgonzola.png",
+          "providerText": "Provider Text",
+          "imageProgressBarPercentage": 50
+        },
+        {
+          "primaryText": "No image, use the default",
+          "secondaryText": "Secondary text"
+        },
+        {
+          "primaryText": "Fourth list item",
+          "secondaryText": "No progress bar",
+          "imageSource": "https://d2o906d8ln7ui1.cloudfront.net/images/tl_brie.png"
+        },
+        {
+          "primaryText": "Fifth list item",
+          "secondaryText": "With background blur",
+          "imageSource": "https://d2o906d8ln7ui1.cloudfront.net/images/MollyforBT7.png"
+        },
+        {
+          "primaryText": "Sixth list item (long text that wraps)",
+          "secondaryText": "Longer secondary text that truncates",
+          "imageSource": "https://d2o906d8ln7ui1.cloudfront.net/images/sm_blue.png"
+        }
+      ]
+    }
+  }

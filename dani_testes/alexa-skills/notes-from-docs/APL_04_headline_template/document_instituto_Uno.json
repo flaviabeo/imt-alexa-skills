@@ -1,0 +1,48 @@
+{
+  "type": "APL",
+  "version": "1.9",
+  "theme": "dark",
+  "import": [
+    {
+      "name": "alexa-layouts",
+      "version": "1.6.0"
+    }
+  ],
+  "mainTemplate": {
+    "items": [
+      {
+        "type": "Container",
+        "height": "100%",
+        "width": "100%",
+        "items": [
+          {
+            "type": "AlexaBackground",
+            "backgroundImageSource": "https://d2o906d8ln7ui1.cloudfront.net/images/templates_v3/headline/HeadlineBackground_Dark.png",
+            "backgroundBlur": true
+          },
+          {
+            "type": "AlexaHeader",
+            "headerBackgroundColor": "black",
+            "headerTitle": "Bem-vind@"
+          },
+          {
+            "type": "AlexaImage",
+            "imageSource": "https://static.wixstatic.com/media/d1d667_977b1a28ad224e4b93eecaa0cfbf6538~mv2.jpg/v1/fit/w_2500,h_1330,al_c/d1d667_977b1a28ad224e4b93eecaa0cfbf6538~mv2.jpg",
+            "left": 300
+          },
+          {
+            "type": "Text",
+            "text-align":"center",
+            "text": "Conheça o Instituto Uno!",
+            "left": 245
+          },
+          {
+            "type": "AlexaFooter",
+            "hintText": "Diga \"Alexa, me conte mais sobre o Instituto Uno\".",
+            "top": 50
+          }
+        ]
+      }
+    ]
+  }
+}
