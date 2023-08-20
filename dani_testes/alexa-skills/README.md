@@ -1,4 +1,4 @@
-# Código template para app de weather com UI
+# Descrição dos códigos templates daqui presentes no developer.skills
 
 ## 1. Opção de Custom Model
 
