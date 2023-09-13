@@ -1,0 +1,71 @@
+{
+    "imageListData": {
+        "type": "object",
+        "objectId": "imageListSample",
+        "backgroundImage": {
+            "contentDescription": null,
+            "smallSourceUrl": null,
+            "largeSourceUrl": null,
+            "sources": [
+                {
+                    "url": "https://imgur.com/xAgrVGs.png",
+                    "size": "large"
+                }
+            ]
+        },
+        "title": "Instituto Uno",
+        
+        "listItems": [
+            
+            {
+                "primaryText": "Educação Financeira e comportamental",
+                "imageSource": "https://imgur.com/QD17VPP.png",
+                "justifyContent": "Center",
+                
+                
+                "primaryAction": [
+                    {
+                        "type": "SetValue",
+                        "componentId": "plantList",
+                        "property": "headerTitle",
+                        "value": "${payload.imageListData.listItems[0].primaryText} is selected"
+                        
+                    }
+                ]
+            },
+            {
+                "primaryText": "Alfabetização básica",
+                "imageSource": "https://imgur.com/PUlau0i.png",
+                
+                
+                "primaryAction": [
+                    {
+                        "type": "SetValue",
+                        "componentId": "plantList",
+                        "property": "headerTitle",
+                        "value": "${payload.imageListData.listItems[0].primaryText} is selected"
+                        
+                    }
+                ]
+            },{
+                
+                "primaryText": "Alfabetização e letramento",
+                "imageSource": "https://imgur.com/0VSrEt7.png",
+                
+                
+                "primaryAction": [
+                    {
+                        "type": "SetValue",
+                        "componentId": "plantList",
+                        "property": "headerTitle",
+                        "value": "${payload.imageListData.listItems[0].primaryText} is selected"
+                        
+                    }
+                ]
+            }
+        ],
+        
+        "logoUrl": "https://d2o906d8ln7ui1.cloudfront.net/images/templates_v3/logo/logo-modern-botanical-white.png",
+        "hintText": "‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ Alexa, me fale sobre o quero saber!"
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "imageListData": {
+        "type": "object",
+        "objectId": "paginatedListSample",
+        "title": "Instituto Uno",
+        "listItems": [
+            {
+                "secondaryText": "Você gostaria de fazer uma doação ao Instituto Uno?",
+                "imageSource": "https://imgur.com/NM4kJ0T.png",
+                "primaryAction": [
+                    {
+                        "type": "SetValue",
+                        "componentId": "paginatedList",
+                        "property": "headerTitle",
+                        "value": "Opção deDoação selecionada!"
+                    }
+                ]
+            }
+            
+        ]
+        
+    }
+}

@@ -1,0 +1,97 @@
+{
+    "document": {
+        "type": "APL",
+        "version": "2023.2",
+        "license": "Copyright 2023 Amazon.com, Inc. or its affiliates. All Rights Reserved.\nSPDX-License-Identifier: LicenseRef-.amazon.com.-AmznSL-1.0\nLicensed under the Amazon Software License  http://aws.amazon.com/asl/",
+        "theme": "dark",
+        "import": [
+            {
+                "name": "alexa-layouts",
+                "version": "1.7.0"
+            }
+        ],
+        "mainTemplate": {
+            "parameters": [
+                "payload"
+            ],
+            "items": [
+                {
+                    "type": "AlexaImageList",
+                    "id": "plantList",
+                    "headerTitle": "${payload.imageListData.title}",
+                    "headerBackButton": true,
+                    "headerDivider": false,
+                    "headerAttributionImage": "${payload.imageListData.logoUrl}",
+                    "backgroundImageSource": "${payload.imageListData.backgroundImage.sources[0].url}",
+                    "backgroundBlur": false,
+                    "backgroundColorOverlay": false,
+                    "imageAspectRatio": "square",
+                    "imageMetadataPrimacy": true,
+                    "imageScale": "best-fill",
+                    "listItems": "${payload.imageListData.listItems}",
+                    "hintText": "${payload.imageListData.hintText}"
+                }
+            ]
+        }
+    },
+    "datasources": {
+        "imageListData": {
+            "type": "object",
+            "objectId": "imageListSample",
+            "backgroundImage": {
+                "contentDescription": null,
+                "smallSourceUrl": null,
+                "largeSourceUrl": null,
+                "sources": [
+                    {
+                        "url": "https://imgur.com/xAgrVGs.png",
+                        "size": "large"
+                    }
+                ]
+            },
+            "title": "Instituto Uno",
+            "listItems": [
+                {
+                    "primaryText": "Educação Financeira e comportamental",
+                    "imageSource": "https://imgur.com/QD17VPP.png",
+                    "justifyContent": "Center",
+                    "primaryAction": [
+                        {
+                            "type": "SetValue",
+                            "componentId": "plantList",
+                            "property": "headerTitle",
+                            "value": "${payload.imageListData.listItems[0].primaryText} is selected"
+                        }
+                    ]
+                },
+                {
+                    "primaryText": "Alfabetização básica",
+                    "imageSource": "https://imgur.com/PUlau0i.png",
+                    "primaryAction": [
+                        {
+                            "type": "SetValue",
+                            "componentId": "plantList",
+                            "property": "headerTitle",
+                            "value": "${payload.imageListData.listItems[0].primaryText} is selected"
+                        }
+                    ]
+                },
+                {
+                    "primaryText": "Alfabetização e letramento",
+                    "imageSource": "https://imgur.com/0VSrEt7.png",
+                    "primaryAction": [
+                        {
+                            "type": "SetValue",
+                            "componentId": "plantList",
+                            "property": "headerTitle",
+                            "value": "${payload.imageListData.listItems[0].primaryText} is selected"
+                        }
+                    ]
+                }
+            ],
+            "logoUrl": "https://d2o906d8ln7ui1.cloudfront.net/images/templates_v3/logo/logo-modern-botanical-white.png",
+            "hintText": "‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ Alexa, me fale sobre o quero saber!"
+        }
+    },
+    "sources": {}
+}
