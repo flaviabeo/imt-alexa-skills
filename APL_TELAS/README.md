@@ -1,8 +1,7 @@
-# README - Acesso às Imagens Utilizadas
+# APL: interface gráfica das telas
 
-Neste README, você encontrará acesso às imagens utilizadas no projeto. As imagens são hospedadas no Imgur e estão disponíveis através do seguinte link:
 
-[Imagens do Projeto](https://imgur.com/a/z74yhJk)
+[Os links utilizados pra importar a imagem estão vindo desse arquivo imgur](https://imgur.com/a/z74yhJk)
 
 ## Considerações para Cada Tela
 
@@ -27,7 +26,6 @@ Aqui estão algumas considerações específicas para cada tela do projeto:
 - (Inserir considerações aqui)
 ## Progresso de Cada Tela
 
-Aqui está o progresso atual de cada tela do projeto:
 
 ### Tela 01:
 - [ ]
@@ -43,3 +41,6 @@ Aqui está o progresso atual de cada tela do projeto:
 
 ### Tela 05:
 - [ ]
+
+## 
+![Referência](https://imgur.com/oEh8asN.png)
