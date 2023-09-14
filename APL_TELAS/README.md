@@ -32,13 +32,13 @@ Aqui estão algumas considerações específicas para cada tela do projeto:
 - [ ]
 
 ### Tela 02:
-- [ ]
+- [x] 
 
 ### Tela 03:
 - [ ]
 
 ### Tela 04:
-- [x] OK, mas com considerações.
+- [x]
 
 ### Tela 05:
 - [x] 
