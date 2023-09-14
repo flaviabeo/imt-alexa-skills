@@ -1,0 +1,68 @@
+{
+    "document": {
+        "type": "APL",
+        "version": "2023.2",
+        "license": "Copyright 2023 Amazon.com, Inc. or its affiliates. All Rights Reserved.\nSPDX-License-Identifier: LicenseRef-.amazon.com.-AmznSL-1.0\nLicensed under the Amazon Software License  http://aws.amazon.com/asl/",
+        "theme": "dark",
+        "import": [
+            {
+                "name": "alexa-layouts",
+                "version": "1.7.0"
+            }
+        ],
+        "mainTemplate": {
+            "parameters": [
+                "payload"
+            ],
+            "item": [
+                {
+                    "type": "AlexaHeadline",
+                    "id": "PlantHeadline",
+                    "primaryText": "${payload.headlineTemplateData.properties.textContent.primaryText.text}",
+                    "headerBackButton": false,
+                    "headerAttributionImage": "${payload.headlineTemplateData.properties.logoUrl}",
+                    "headerAttributionPrimacy": true,
+                    "footerHintText": "${payload.headlineTemplateData.properties.hintText}",
+                    "backgroundImageSource": "${payload.headlineTemplateData.properties.backgroundImage.sources[0].url}",
+                    "backgroundColorOverlay": false,
+                    "speech": "${payload.headlineTemplateData.properties.welcomeSpeech}"
+                }
+            ]
+        },
+        "onMount": [
+            {
+                "type": "SpeakItem",
+                "componentId": "PlantHeadline"
+            }
+        ]
+    },
+    "datasources": {
+        "headlineTemplateData": {
+            "type": "object",
+            "objectId": "headlineSample",
+            "properties": {
+                "backgroundImage": {
+                    "contentDescription": null,
+                    "smallSourceUrl": null,
+                    "largeSourceUrl": null,
+                    "sources": [
+                        {
+                            "url": "https://imgur.com/VMTJToy.png",
+                            "size": "large"
+                        }
+                    ]
+                },
+                "logoUrl": "https://d2o906d8ln7ui1.cloudfront.net/images/templates_v3/logo/logo-modern-botanical-white.png",
+                "welcomeSpeechSSML": "<speak><amazon:emotion name='excited' intensity='medium'>Welcome to The Daily Plant Facts</amazon:emotion></speak>"
+            },
+            "transformers": [
+                {
+                    "inputPath": "welcomeSpeechSSML",
+                    "transformer": "ssmlToSpeech",
+                    "outputName": "welcomeSpeech"
+                }
+            ]
+        }
+    },
+    "sources": {}
+}

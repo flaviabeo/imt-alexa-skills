@@ -11,8 +11,8 @@ Aqui estão algumas considerações específicas para cada tela do projeto:
 - (Inserir considerações aqui)
 
 ### Tela 02:
-- Não foi possível encontrar uma maneira de alterar a cor do texto.
-- (Inserir outras considerações, se houver)
+- Não foi possível encontrar uma maneira de alterar a cor do texto. (isso vale pra todos os com o INSTITUTO UNO no canto superior esquerdo)
+- tentei componentizar o texto, mas textAlign não pareceu ser flexível o suficiente, dentro e fora do container. tentei alterando o width vh e ele incuia todos os componentes ao inveś só do texto, mesmo tentando separar num container. Provavelmente me equivoquei em alguma parte.
 
 ### Tela 03:
 - (Inserir considerações aqui)
@@ -23,7 +23,8 @@ Aqui estão algumas considerações específicas para cada tela do projeto:
 - Textos dentro da lista não parecem ter a propriedade de centralizar. Tentei com e sem containers e não foi
 
 ### Tela 05:
-- (Inserir considerações aqui)
+- Presumi que as mãos dadas ao centro da tela não eram um botão, e sim uma imagem ilustrativa
+- criado a partir de padrão de exibição de slide, não vi como removia o 1/1 ao final..
 ## Progresso de Cada Tela
 
 
@@ -40,7 +41,7 @@ Aqui estão algumas considerações específicas para cada tela do projeto:
 - [x] OK, mas com considerações.
 
 ### Tela 05:
-- [ ]
+- [x] 
 
 ## 
 ![Referência](https://imgur.com/oEh8asN.png)

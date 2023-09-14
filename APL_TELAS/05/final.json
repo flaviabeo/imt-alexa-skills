@@ -1,0 +1,56 @@
+{
+    "document": {
+        "type": "APL",
+        "version": "2023.2",
+        "license": "Copyright 2023 Amazon.com, Inc. or its affiliates. All Rights Reserved.\nSPDX-License-Identifier: LicenseRef-.amazon.com.-AmznSL-1.0\nLicensed under the Amazon Software License  http://aws.amazon.com/asl/",
+        "theme": "dark",
+        "import": [
+            {
+                "name": "alexa-layouts",
+                "version": "1.7.0"
+            }
+        ],
+        "mainTemplate": {
+            "parameters": [
+                "payload"
+            ],
+            "items": [
+                {
+                    "type": "AlexaPaginatedList",
+                    "id": "paginatedList",
+                    "headerTitle": "${payload.imageListData.title}",
+                    "headerBackButton": true,
+                    "headerAttributionImage": "${payload.imageListData.logoUrl}",
+                    "backgroundBlur": false,
+                    "backgroundColorOverlay": false,
+                    "backgroundScale": "best-fill",
+                    "backgroundAlign": "bottom",
+                    "theme": "dark",
+                    "listItems": "${payload.imageListData.listItems}"
+                }
+            ]
+        }
+    },
+    "datasources": {
+        "imageListData": {
+            "type": "object",
+            "objectId": "paginatedListSample",
+            "title": "Instituto Uno",
+            "listItems": [
+                {
+                    "secondaryText": "Você gostaria de fazer uma doação ao Instituto Uno?",
+                    "imageSource": "https://imgur.com/NM4kJ0T.png",
+                    "primaryAction": [
+                        {
+                            "type": "SetValue",
+                            "componentId": "paginatedList",
+                            "property": "headerTitle",
+                            "value": "Opção deDoação selecionada!"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "sources": {}
+}

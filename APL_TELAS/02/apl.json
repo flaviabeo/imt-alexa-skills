@@ -1,55 +1,37 @@
 {
-    "imageListData": {
-        "type": "object",
-        "objectId": "imageListSample",
-        "backgroundImage": {
-            "contentDescription": null,
-            "smallSourceUrl": null,
-            "largeSourceUrl": null,
-            "sources": [
-                {
-                    "url": "https://imgur.com/2OZhiSB.png",
-                    "size": "large"
-                }
-            ]
-        },
-        "title": "Instituto Uno",
-        
-        "import": [
-            {
-                "name": "alexa-styles",
-                "version": "1.6.0"
-            },
-            {
-                "name": "alexa-layouts",
-                "version": "1.7.0"
-            }
+    "type": "APL",
+    "version": "2023.2",
+    "license": "Copyright 2023 Amazon.com, Inc. or its affiliates. All Rights Reserved.\nSPDX-License-Identifier: LicenseRef-.amazon.com.-AmznSL-1.0\nLicensed under the Amazon Software License  http://aws.amazon.com/asl/",
+    "theme": "dark",
+    "import": [
+        {
+            "name": "alexa-layouts",
+            "version": "1.7.0"
+        }
+    ],
+    "mainTemplate": {
+        "parameters": [
+            "payload"
         ],
-        "listItems": [
-            
+        "item": [
             {
-        
-            },
-            {
-                "primaryText": "Peonies & Petals Nursery",
-                "imageSource": "https://d2o906d8ln7ui1.cloudfront.net/images/templates_v3/gridlist/GridList_Image1.png",
-                
-                
-                "primaryAction": [
-                    {
-                        "type": "SetValue",
-                        "componentId": "plantList",
-                        "property": "headerTitle",
-                        "value": "${payload.imageListData.listItems[0].primaryText} is selected"
-                        
-                    }
-                ]
-            },{
-        
+                "type": "AlexaHeadline",
+                "id": "PlantHeadline",
+                "primaryText": "${payload.headlineTemplateData.properties.textContent.primaryText.text}",
+                "headerBackButton": false,
+                "headerAttributionImage": "${payload.headlineTemplateData.properties.logoUrl}",
+                "headerAttributionPrimacy": true,
+                "footerHintText": "${payload.headlineTemplateData.properties.hintText}",
+                "backgroundImageSource": "${payload.headlineTemplateData.properties.backgroundImage.sources[0].url}",
+                "backgroundColorOverlay": false,
+                "speech": "${payload.headlineTemplateData.properties.welcomeSpeech}"
             }
-        ],
-        
-        "logoUrl": "https://d2o906d8ln7ui1.cloudfront.net/images/templates_v3/logo/logo-modern-botanical-white.png",
-        "hintText": "Try, \"Alexa, select number 1"
-    }
+        ]
+    },
+    "onMount": [
+        {
+            "type": "SpeakItem",
+            "componentId": "PlantHeadline"
+        }
+    ]
 }
