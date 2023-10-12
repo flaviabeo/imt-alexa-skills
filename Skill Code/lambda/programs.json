@@ -1,0 +1,70 @@
+{
+    "type": "APL",
+    "version": "2023.2",
+    "license": "Copyright 2023 Amazon.com, Inc. or its affiliates. All Rights Reserved.\nSPDX-License-Identifier: LicenseRef-.amazon.com.-AmznSL-1.0\nLicensed under the Amazon Software License  http://aws.amazon.com/asl/",
+    "theme": "dark",
+    "import": [
+        {
+            "name": "alexa-layouts",
+            "version": "1.7.0"
+        }
+    ],
+    "mainTemplate": {
+        "items": [
+            {
+                "type": "AlexaImageList",
+                "id": "plantList",
+                "headerTitle": "Instituto Uno",
+                "headerBackButton": true,
+                "headerDivider": false,
+                "headerAttributionImage": "https://d2o906d8ln7ui1.cloudfront.net/images/templates_v3/logo/logo-modern-botanical-white.png",
+                "backgroundImageSource": "https://imgur.com/xAgrVGs.png",
+                "backgroundBlur": false,
+                "backgroundColorOverlay": false,
+                "imageAspectRatio": "square",
+                "imageMetadataPrimacy": true,
+                "imageScale": "best-fill",
+                "listItems": [
+                    {
+                        "primaryText": "Educação Financeira e comportamental",
+                        "imageSource": "https://imgur.com/QD17VPP.png",
+                        "justifyContent": "Center",
+                        "primaryAction": [
+                            {
+                                "type": "SetValue",
+                                "componentId": "plantList",
+                                "property": "headerTitle",
+                                "value": "Educação Financeira e comportamental is selected"
+                            }
+                        ]
+                    },
+                    {
+                        "primaryText": "Alfabetização básica",
+                        "imageSource": "https://imgur.com/PUlau0i.png",
+                        "primaryAction": [
+                            {
+                                "type": "SetValue",
+                                "componentId": "plantList",
+                                "property": "headerTitle",
+                                "value": "Alfabetização básica is selected"
+                            }
+                        ]
+                    },
+                    {
+                        "primaryText": "Alfabetização e letramento",
+                        "imageSource": "https://imgur.com/0VSrEt7.png",
+                        "primaryAction": [
+                            {
+                                "type": "SetValue",
+                                "componentId": "plantList",
+                                "property": "headerTitle",
+                                "value": "Alfabetização e letramento is selected"
+                            }
+                        ]
+                    }
+                ],
+                "hintText": "‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ Alexa, me fale sobre o que quero saber!"
+            }
+        ]
+    }
+}

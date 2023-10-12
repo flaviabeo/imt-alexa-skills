@@ -1,0 +1,39 @@
+{
+    "type": "APL",
+    "version": "1.6",
+    "description": "initial screen",
+    "import": [
+      {
+        "name": "alexa-layouts",
+        "version": "1.3.0"
+      }
+    ],
+    "mainTemplate": {
+      "parameters": [
+        "payload"
+      ],
+      "items": [
+          {
+            "type": "Container",
+            "height": "100%",
+            "width": "100%",
+            "items": [
+              {
+                "type": "AlexaBackground",
+                "backgroundImageSource": "https://imgur.com/1YspT93.png",
+                "backgroundBlur": false
+              
+            },
+          
+              {
+                "type": "Text",
+                "text-align":"center",
+                "text": "Conheça o Instituto Uno! \n Diga donate para doar",
+                "color": "black"
+                
+              }
+            ]
+          }
+        ]
+    }
+  }
