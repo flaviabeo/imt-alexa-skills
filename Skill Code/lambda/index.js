@@ -3,6 +3,7 @@ const text = require('./text.json');
 const donationDocument = require('./donation.json');
 const programsDucument = require('./programs.json');
 const knowMoreDocument = require('./knowMore.json');
+const projectsAndProgramsDocument = require('./projectsAndPrograms.json');
 
 //const buttonDocument = require('./button.json');
 
@@ -201,6 +202,41 @@ const KnowMoreIntentHandler = {
     }
 };
 
+// PROJECTS AND PROGRAMS PAGE
+
+const PROGRAMS_AND_PROJECTS_TOKEN =  'ProgramsAndProjectsToken';
+
+
+
+const ProgramsAndProjectsIntentHandler = {
+    canHandle(handlerInput) {
+        return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
+            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'ProgramsAndProjectsIntent';
+    },
+    handle(handlerInput){
+        let speakOutput = "Hi!";
+        let responseBuilder = handlerInput.responseBuilder;
+        if (Alexa.getSupportedInterfaces(handlerInput.requestEnvelope)['Alexa.Presentation.APL']){
+            
+            // Add the RenderDocument directive to the responseBuilder
+            responseBuilder.addDirective({
+                type: 'Alexa.Presentation.APL.RenderDocument',
+                token: PROGRAMS_AND_PROJECTS_TOKEN,
+                document: projectsAndProgramsDocument,
+            });
+            
+            // Tailor the speech for a device with a screen.
+            speakOutput += "Here is Unos institute programs and projects page"
+        } else {
+            speakOutput += " This example would be more interesting on a device with a screen, such as an Echo Show or Fire TV."
+        }
+        return responseBuilder
+            .speak(speakOutput)
+            //.reprompt('add a reprompt if you want to keep the session open for the user to respond')
+            .getResponse();
+    }
+};
+
 
 
 // ERRORS
@@ -317,6 +353,7 @@ exports.handler = Alexa.SkillBuilders.custom()
     .addRequestHandlers(
         LaunchRequestHandler,
         KnowMoreIntentHandler,
+        ProgramsAndProjectsIntentHandler,
         ProgramsIntentHandler,
         HelloWorldIntentHandler,
         DonationIntentHandler,
