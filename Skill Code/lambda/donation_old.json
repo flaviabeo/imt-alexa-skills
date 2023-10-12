@@ -23,34 +23,34 @@
                 "backgroundImageSource": "https://d2o906d8ln7ui1.cloudfront.net/images/templates_v3/headline/HeadlineBackground_Dark.png",
                 "backgroundBlur": true
               },
-              {
-              "type": "AlexaButton",
-              "alignSelf": "center",
-              "id": "fadeHelloTextButton",
-              "buttonText": "donation",
-              "primaryAction": [
-                {
-                  "type": "AnimateItem",
-                  "duration": 3000,
-                  "componentId": "helloTextComponent",
-                  "value": {
-                    "property": "opacity",
-                    "to": 0
-                  }
-                },
-                {
-                  "type": "SendEvent",
-                  "arguments": [
-                    "user clicked the button"
-                  ]
-                }
-              ]
-            },
+              
           
               {
                 "type": "AlexaImage",
                 "imageSource": "https://static.wixstatic.com/media/d1d667_977b1a28ad224e4b93eecaa0cfbf6538~mv2.jpg/v1/fit/w_2500,h_1330,al_c/d1d667_977b1a28ad224e4b93eecaa0cfbf6538~mv2.jpg",
                 "left": 300
+              },{
+                "type": "AlexaButton",
+                "alignSelf": "center",
+                "id": "fadeHelloTextButton",
+                "buttonText": "donation",
+                "primaryAction": [
+                  {
+                    "type": "AnimateItem",
+                    "duration": 3000,
+                    "componentId": "helloTextComponent",
+                    "value": {
+                      "property": "opacity",
+                      "to": 0
+                    }
+                  },
+                  {
+                    "type": "SendEvent",
+                    "arguments": [
+                      "user clicked the button"
+                    ]
+                  }
+                ]
               },
               {
                 "type": "Text",

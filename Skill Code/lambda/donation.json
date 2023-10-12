@@ -1,0 +1,68 @@
+{
+    "type": "APL",
+    "version": "1.6",
+    "description": "This APL document places text on the screen and includes a button that sends the skill a message when selected. The button is a pre-defined responsive component from the alexa-layouts package.",
+    "import": [
+      {
+        "name": "alexa-layouts",
+        "version": "1.3.0"
+      }
+    ],
+    "mainTemplate": {
+      "parameters": [
+        "payload"
+      ],
+      "items": [
+        {
+          "type": "Container",
+          "height": "100%",
+          "width": "100%",
+          "items": [
+            {
+              "type": "AlexaBackground",
+              "backgroundImageSource": "https://imgur.com/NM4kJ0T.png",
+              "backgroundBlur": false
+            },
+            {
+              "type": "Container",
+              "direction": "column",
+              "height": "100%",
+              "alignItems": "center",
+              "justifyContent": "center",
+              "items": [
+                {
+                  "type": "AlexaButton",
+                  "alignSelf": "center",
+                  "id": "fadeHelloTextButton",
+                  "buttonText": " ",
+                  "primaryAction": [
+                    {
+                      "type": "AnimateItem",
+                      "duration": 3000,
+                      "componentId": "helloTextComponent",
+                      "value": {
+                        "property": "opacity",
+                        "to": 0
+                      }
+                    },
+                    {
+                      "type": "SendEvent",
+                      "arguments": [
+                        "user clicked the button"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "AlexaFooter",
+              "hintText": "Diga \"Alexa, quero doar ao Instituto!",
+              "top": 50
+            }
+          ]
+        }
+      ]
+    }
+  }
+  
